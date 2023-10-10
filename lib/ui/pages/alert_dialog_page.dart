@@ -3,7 +3,7 @@ import 'package:login_page/constants/app_colors.dart';
 import 'package:login_page/widgets/custom_button.dart';
 
 class AlertDialogPage extends StatefulWidget {
-  AlertDialogPage({super.key});
+  const AlertDialogPage({super.key});
 
   @override
   State<AlertDialogPage> createState() => _AlertDialogPageState();
@@ -76,10 +76,10 @@ bool isSelected1 = false;
                                         borderRadius: BorderRadius.circular(10),
                                         color: const Color(0xff475e7a))),
                               ),
-                              Container(
+                              const SizedBox(
                                 width: 19.547170639038086,
                                 height: 19.547170639038086,
-                                child: const Icon(
+                                child: Icon(
                                   Icons.close,
                                   color: Colors.white,
                                   size: 35,
