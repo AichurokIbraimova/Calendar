@@ -12,4 +12,6 @@ class AppColors {
   static const white = Colors.white;
     static const container =  Color(0xffA9B1B9);
     static const container1= Color(0xff59747e);
+    static Color izmenit = const Color.fromRGBO(68, 224, 150, 1);
+    static Color red = const Color.fromRGBO(193, 53, 53, 1);
 }

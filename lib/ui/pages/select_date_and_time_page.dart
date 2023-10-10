@@ -152,6 +152,7 @@ class _SelectDatePageState extends State<SelectDatePage> {
                       )
                     ]),
                   ),
+                  // ignore: prefer_const_constructors
                   DatePicker(monthTextStyle: TextStyle(color: Colors.black),
                     height: 100,
                     DateTime.now(),

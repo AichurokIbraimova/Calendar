@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:login_page/ui/pages/alert_dialog_page.dart';
-import 'package:login_page/ui/pages/invite_page.dart';
-import 'package:login_page/ui/pages/select_date_and_time_page.dart';
+
+import 'package:login_page/ui/pages/invite_demo_page.dart';
 
 
 void main() {
@@ -20,7 +19,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home:  SelectDatePage(),
+      home: const InviteDemoPage(),
     );
   }
 }
