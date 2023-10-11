@@ -35,7 +35,7 @@ class ImageWidget extends StatelessWidget {
             ],
           ),
         ),
-        SizedBox(width: 10),
+        const SizedBox(width: 10),
         ContPriglasit(
           text: 'Пригласить',
           height: MediaQuery.of(context).size.height * 0.035,
