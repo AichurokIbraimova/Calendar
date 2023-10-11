@@ -3,6 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:login_page/constants/app_colors.dart';
 import 'package:login_page/constants/app_text_styles.dart';
+import 'package:login_page/widgets/container_widget.dart';
+import 'package:login_page/widgets/name_text.dart';
 
 class PersonalPage extends StatelessWidget {
   const PersonalPage({super.key});
@@ -33,7 +35,7 @@ class PersonalPage extends StatelessWidget {
           const SizedBox(
             height: 20,
           ),
-          ContainerButton(
+          ContainerWidget(
             text: 'Изменить фото',
             color: AppColors.izmenit,
             height: MediaQuery.of(context).size.height * 0.04,
@@ -80,13 +82,12 @@ class PersonalPage extends StatelessWidget {
                   height: MediaQuery.of(context).size.width * 0.35,
                   width: MediaQuery.of(context).size.height * 0.045,
                 ),
-                // ignore: prefer_const_constructors
                 SizedBox(
                   height: 60,
                 ),
                 Padding(
                   padding: const EdgeInsets.only(right: 50),
-                  child: ContainerButton(
+                  child: ContainerWidget(
                     text: 'ВЫЙТИ',
                     color: AppColors.red,
                     height: MediaQuery.of(context).size.height * 0.05,
@@ -124,87 +125,22 @@ class ContPriglasit extends StatelessWidget {
         height: height,
         decoration: BoxDecoration(
             color: AppColors.izmenit, borderRadius: BorderRadius.circular(5)),
-        child: Center(
-          child: Padding(
-            padding: EdgeInsets.only(left: 20),
-            child: Row(
-              children: [
-                Text(
-                  text,
-                  style: AppTextStyles.izmenit,
-                ),
-                Icon(
-                  icons,
-                  color: AppColors.white,
-                ),
-              ],
-            ),
+        child: Padding(
+          padding: EdgeInsets.only(left: 20),
+          child: Row(
+            children: [
+              Text(
+                text,
+                style: AppTextStyles.izmenit,
+              ),
+              Icon(
+                icons,
+                color: AppColors.white,
+              ),
+            ],
           ),
         ),
       ),
-    );
-  }
-}
-
-class ContainerButton extends StatelessWidget {
-  const ContainerButton({
-    super.key,
-    required this.text,
-    required this.color,
-    required this.height,
-    required this.width,
-  });
-  final String text;
-  final Color color;
-  // final TextStyle style;
-  final double height;
-  final double width;
-
-  @override
-  Widget build(BuildContext context) {
-    return InkWell(
-      onTap: () {},
-      child: Container(
-        width: width,
-        height: height,
-        decoration: BoxDecoration(
-            color: color, borderRadius: BorderRadius.circular(30)),
-        child: Center(
-          child: Text(
-            text,
-            style: AppTextStyles.izmenit,
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-class NameText extends StatelessWidget {
-  const NameText({
-    super.key,
-    required this.text,
-    required this.text1,
-  });
-  final String text;
-  final String text1;
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Text(
-          text,
-          style: AppTextStyles.izmenit,
-        ),
-        const SizedBox(
-          width: 10,
-        ),
-        Text(
-          text1,
-          style: AppTextStyles.name,
-        ),
-      ],
     );
   }
 }
