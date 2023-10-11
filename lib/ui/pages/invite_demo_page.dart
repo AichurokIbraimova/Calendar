@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:login_page/constants/app_colors.dart';
 import 'package:login_page/constants/app_text_styles.dart';
-import 'package:login_page/ui/pages/personal_page.dart';
+import 'package:login_page/widgets/image_widget.dart';
 
 class InviteDemoPage extends StatelessWidget {
   const InviteDemoPage({super.key});
@@ -61,7 +61,7 @@ class InviteDemoPage extends StatelessWidget {
           const SizedBox(
             height: 30,
           ),
-          ImageButton(
+          ImageWidget(
             image: Image.asset('assets/image2.png'),
             text: 'Сергей Прохоров',
             text1: 'ID 005412',
@@ -69,7 +69,7 @@ class InviteDemoPage extends StatelessWidget {
           const SizedBox(
             height: 30,
           ),
-          ImageButton(
+          ImageWidget(
             image: Image.asset('assets/sergey.png'),
             text: 'Сергей Юрьевич',
             text1: 'ID 678234',
@@ -77,7 +77,7 @@ class InviteDemoPage extends StatelessWidget {
           const SizedBox(
             height: 30,
           ),
-          ImageButton(
+          ImageWidget(
             image: Image.asset('assets/victor.png'),
             text: 'Виктор Генадьевич',
             text1: 'ID 099012',
@@ -85,7 +85,7 @@ class InviteDemoPage extends StatelessWidget {
           const SizedBox(
             height: 30,
           ),
-          ImageButton(
+          ImageWidget(
             image: Image.asset('assets/olga.png'),
             text: 'Ольга Смольная',
             text1: 'ID 012345',
@@ -93,7 +93,7 @@ class InviteDemoPage extends StatelessWidget {
           const SizedBox(
             height: 30,
           ),
-          ImageButton(
+          ImageWidget(
             image: Image.asset('assets/victoriya.png'),
             text: 'Виктория Сикрет',
             text1: 'ID 787813',
@@ -116,53 +116,6 @@ class InviteDemoPage extends StatelessWidget {
           )
         ],
       ),
-    );
-  }
-}
-
-class ImageButton extends StatelessWidget {
-  const ImageButton({
-    super.key,
-    required this.image,
-    required this.text,
-    required this.text1,
-  });
-  final Image image;
-  final String text;
-  final String text1;
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Padding(
-          padding: const EdgeInsets.only(left: 30),
-          child: image,
-        ),
-        const SizedBox(
-          width: 20,
-        ),
-        Padding(
-          padding: const EdgeInsets.only(right: 40),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(text, style: AppTextStyles.activPrig),
-              Text(text1, style: AppTextStyles.id)
-            ],
-          ),
-        ),
-        SizedBox(width: 10),
-        ContPriglasit(
-          text: 'Пригласить',
-          height: MediaQuery.of(context).size.height * 0.035,
-          width: MediaQuery.of(context).size.height * 0.16,
-        ),
-        const SizedBox(
-          height: 20,
-        ),
-      ],
     );
   }
 }
